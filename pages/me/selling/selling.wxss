@@ -1,0 +1,49 @@
+/* pages/me/selling/selling.wxss */
+.spBox{
+  width: 88vw;
+  margin: 3vw;
+  padding: 3vw;
+  background-color: white;
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+.row1{
+  display: flex;
+}
+.row1>image{
+  width: 24vw;
+  height: 24vw;
+  border-radius: 5%;
+  overflow: hidden;
+}
+.mes2{
+  display: flex;
+  flex-direction: column;
+  margin-left: 3vw;
+}
+.mes2>view{
+  height: 8vw;
+  line-height: 8vw;
+}
+.otherMes{
+  display: flex;
+}
+.otherMes>view{
+  color: #555;
+  font-size: small;
+  padding-right: 2vw;
+}
+.price{
+  color: red;
+}
+.row2{
+  margin-top: 3vw;
+}
+.row2>view{
+  float: right;
+  padding: 1vw 3vw 1vw 3vw;
+  margin-left: 2vw;
+  border: 1px solid #e2e2e2;
+  border-radius: 5vw;
+  color: #333;
+}

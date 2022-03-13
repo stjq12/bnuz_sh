@@ -1,0 +1,68 @@
+<!--pages/message/index/index.wxml-->
+<view class="page">
+  <view class="header">
+    <view class="tapName">
+      <view class="{{tapIndex == 0?'selectTap':'notSelect'}}" bindtap="changeTap" data-index="0">通知</view>
+      <view class="border"></view>
+      <view class="{{tapIndex == 1?'selectTap':'notSelect'}}" bindtap="changeTap" data-index="1">聊天</view>
+    </view>
+  </view>
+  <swiper class="tapSwiper" current="{{tapIndex}}" bindchange="slipTap">
+    <!-- 通知 -->
+    <swiper-item>
+      <scroll-view class="tap" scroll-y>
+        <view class="tap">
+          <view class="nofitication" wx:for="{{noList}}" wx:key="id">
+            <view class="noTimeRow">
+              <view class="noTime">
+                {{item.time}}
+              </view>
+            </view>
+            <view class="noBox">
+              <view class="noTitle">
+                <view>{{item.t1}}</view>
+                <view>{{item.t2}}</view>
+              </view>
+              <view class="noPhoto">
+                <image src="{{item.srcPhoto}}"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <!-- 消息 -->
+    <swiper-item>
+      <scroll-view class="tap" scroll-y>
+        <view class="tap">
+          <view class="seach">
+            <input type="text" />
+            <view>
+              <image src="/icon/header/seach.png"></image>
+            </view>
+          </view>
+          <view class="row" wx:for="{{mesList}}" wx:key="id">
+            <scroll-view scroll-x="true" enhanced="true" paging-enabled="true">
+              <view class="messageBox">
+                <view class="headPhoto">
+                  <image src="{{apiUrl}}/pic/headPhoto/{{item.headPhoto}}"></image>
+                </view>
+                <view class="chatMes">
+                  <view>{{item.nickName}}</view>
+                  <view>{{item.mesLast}}</view>
+                  <view>{{item.time}}</view>
+                </view>
+                <view class="spPhoto">
+                  <image mode="aspectFill" src="{{apiUrl}}/pic/shop/{{item.srcPhoto}}"></image>
+                </view>
+                <view class="clear"></view>
+              </view>
+              <view class="mesDel" bindtap="delMes" data-mesIndex="{{index}}">删除</view>
+              <view class="hrMes"></view>
+            </scroll-view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

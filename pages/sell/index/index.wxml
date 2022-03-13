@@ -1,0 +1,84 @@
+<!--pages/sell/index/index.wxml-->
+<view class="page">
+  <view class="header">
+    <view class="seach">
+      <input type="text" />
+      <view>
+        <image src="/icon/header/seach.png"></image>
+      </view>
+    </view>
+    <view wx:if="{{arrange==true}}" class="headerBtn" bindtap="arrangeChange">
+      <image src="/icon/header/arrange1.png"></image>
+    </view>
+    <view wx:else class="headerBtn" bindtap="arrangeChange">
+      <image src="/icon/header/arrange2.png"></image>
+    </view>
+    <view class="headerBtn" bindtap="addSell">
+      <image src="/icon/header/add.png"></image>
+    </view>
+    <view class="clear"></view>
+  </view>
+  <view style="background-color: #f2f2f2;height:100rpx;width: 100%"></view>
+  <!-- 方格状态排列 -->
+  <view class="main" wx:if="{{arrange==false}}">
+    <view class="column">
+      <view class="spBox" wx:for="{{spListOdd}}" wx:key="id" bindtap="toSpDetail" data-spid="((item.id))">
+        <image src="{{apiUrl}}/pic/shop/{{item.pic1}}" mode="widthFix"></image>
+        <view class="spBoxMessage">
+          <view class="message1">{{item.title}}</view>
+          <view class="message2">
+            <view class="priceIcon">￥</view>
+            <view class="price">{{item.price}}</view>
+            <view class="wants">{{item.wants}}人想要</view>
+            <view class="clear"></view>
+          </view>
+          <view class="message3">
+            <view wx:if="{{item.delivery == true}}" style="background-color: #2cb2ff; margin-right: 20rpx">包邮</view>
+            <view wx:if="{{item.knife == true}}" style="background-color: #ff8f2c">可刀</view>
+          </view>
+          <view class="clear"></view>
+        </view>
+      </view>
+    </view>
+    <view class="middle"></view>
+    <view class="column">
+      <view class="spBox" wx:for="{{spListEven}}" wx:key="id" bindtap="toSpDetail" data-spid="{{item.id}}">
+        <image src="{{apiUrl}}/pic/shop/{{item.pic1}}" mode="widthFix"></image>
+        <view class="spBoxMessage">
+          <view class="message1">{{item.title}}</view>
+          <view class="message2">
+            <view class="priceIcon">￥</view>
+            <view class="price">{{item.price}}</view>
+            <view class="wants">{{item.wants}}人想要</view>
+            <view class="clear"></view>
+          </view>
+          <view class="message3">
+            <view wx:if="{{item.delivery == true}}" style="background-color: #2cb2ff; margin-right: 20rpx">包送</view>
+            <view wx:if="{{item.knife == true}}" style="background-color: #ff8f2c">可刀</view>
+          </view>
+          <view class="clear"></view>
+        </view>
+      </view>
+    </view>
+    <view class="clear"></view>
+  </view>
+  <!-- 竖条状排列 -->
+  <view wx:else class="main main-column">
+    <view class="spCol" wx:for="{{spList}}" wx:key="id" bindtap="toSpDetail" data-spid="((item.id))">
+      <image mode="aspectFill" src="{{apiUrl}}/pic/shop/{{item.pic1}}"></image>
+      <view class="spColMessage">
+        <view class="message1">{{item.title}}</view>
+        <view class="message2">
+          <view class="priceIcon">￥</view>
+          <view class="price">{{item.price}}</view>
+          <view class="wants">{{item.wants}}人想要</view>
+          <view class="clear"></view>
+        </view>
+        <view class="message3">
+          <view wx:if="{{item.delivery == true}}" style="background-color: #2cb2ff; margin-right: 20rpx">包邮</view>
+          <view wx:if="{{item.knife == true}}" style="background-color: #ff8f2c">可刀</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

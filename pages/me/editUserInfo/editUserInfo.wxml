@@ -1,0 +1,62 @@
+<!--pages/me/editUserInfo/editUserInfo.wxml-->
+<view class="page">
+  <!-- 第一块 -->
+  <view class="separate"></view>
+  <view class="box">
+    <view class="row" wx:for="{{rowListFirst}}" wx:key="id">
+      <view class="row-title">{{item.title}}</view>
+      <!-- 输入 -->
+      <input wx:if="{{item.ifInput}}" type="text" class="row-input" value="{{item.data}}" bindinput="inputChange"
+        data-type="{{item.name}}" />
+      <!-- 选择 -->
+      <!-- 学院 -->
+      <picker wx:if="{{!item.ifInput && item.name === 'academy'}}" mode="{{item.pickerMode}}" bindchange="academyChange"
+        value="{{item.index}}" range="{{item.array}}">
+        <view class="row-input">
+          {{academyData}}
+        </view>
+      </picker>
+      <!-- 专业 -->
+      <picker wx:if="{{!item.ifInput && item.name === 'major'}}" mode="{{item.pickerMode}}" bindchange="majorChange"
+        value="{{item.index}}" range="{{item.array}}">
+        <view class="row-input">
+          {{majorData}}
+        </view>
+      </picker>
+      <!-- 性别 -->
+      <picker wx:if="{{!item.ifInput && item.name === 'sex'}}" mode="{{item.pickerMode}}" bindchange="sexChange"
+        value="{{item.index}}" range="{{item.array}}">
+        <view class="row-input">
+          {{sexData}}
+        </view>
+      </picker>
+      <!-- 生日 -->
+      <picker wx:if="{{!item.ifInput && item.name === 'birthday'}}" mode="{{item.pickerMode}}" bindchange="birChange"
+        value="{{item.data}}">
+        <view class="row-input">
+          {{item.data}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="separate"></view>
+
+  <!-- 第二课 -->
+  <view class="box">
+    <view class="row">
+      <view class="row-title">我的地址</view>
+      <picker mode="multiSelector" bindcolumnchange="areaChange" value="{{addressIndex}}" range="{{addressList}}">
+        <view class="row-input">
+          {{addressData}}
+        </view>
+      </picker>
+    </view>
+    <view class="row">
+      <view class="row-title">手机号码</view>
+      <input type="text" class="row-input" value="{{phone}}" bindinput="inputChange" data-type="phone" />
+    </view>
+  </view>
+
+  <button class="btn_long" type="primary" bindtap="saveUserInfo" style="margin-top: 30rpx;">保存</button>
+  <button class="btn_long" bindtap="doNotSave" style="margin-top: 30rpx;">取消</button>
+</view>

@@ -1,0 +1,26 @@
+<!--pages/me/binding/binding.wxml-->
+<view class="page">
+  <!-- 头像名字 -->
+  <view class="userinfo">
+    <view class="userinfo-avatar">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <open-data type="userNickName"></open-data>
+  </view>
+  <!-- 表单 -->
+  <form bindsubmit='formSubmit'>
+    <view class="input_box">
+      <view class="input_title">学号</view>
+      <view class="input_num"><input name="log" bindinput="accountInput" placeholder="请输入学号"
+          placeholder-style="color:#999999;" /></view>
+    </view>
+    <view class="hr"></view>
+    <view class="input_box">
+      <view class="input_title">密码</view>
+      <view class="num"><input name="pwd" bindblur="pwdBlur" placeholder="请输入密码" password
+          placeholder-style="color:#999999;" /></view>
+    </view>
+    <view class="hr"></view>
+    <button class="btn_long" disabled="{{disabled}}" type="{{btnstate}}" form-type='submit'>绑定微信号</button>
+  </form>
+</view>

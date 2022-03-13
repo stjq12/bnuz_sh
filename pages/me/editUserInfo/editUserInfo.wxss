@@ -1,0 +1,24 @@
+/* pages/me/editUserInfo/editUserInfo.wxss */
+.box {
+  width: 90%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 15rpx;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+}
+
+.row-title {
+  padding: 30rpx;
+  color: #444;
+  flex: 1;
+}
+
+.row-input {
+  padding: 30rpx;
+  text-align: right;
+  color: #888;
+}

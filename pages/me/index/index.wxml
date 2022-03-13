@@ -1,0 +1,38 @@
+<!--pages/me/index/index.wxml-->
+<view class="page page2">
+  <view class="greenBlock">
+  </view>
+  <view class="userBox" bindtap="editUserInfo">
+    <view class="userAvatar">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="userInfoMes">
+      <view class="userName">{{nickName}}</view>
+      <view class="stuID">{{stuID}}</view>
+    </view>
+    <view class="editIcon">
+      <image src="/icon/public/toRight.png"></image>
+    </view>
+  </view>
+  <view class="userRow2">
+    <view bindtap="ToSelling">
+      <image src="/icon/me/putaway.png"></image>
+      <view>我发布的</view>
+    </view>
+    <view>
+      <image src="/icon/me/saleOut.png"></image>
+      <view>我卖出的</view>
+    </view>
+    <view>
+      <image src="/icon/me/buying.png"></image>
+      <view>我买到的</view>
+    </view>
+  </view>
+  <view class="userRow3">
+    <view class="row3Box" wx:for="{{rowThirdList}}" wx:key="id" bindtap="rowThirdListClick" data-url="{{item.url}}">
+      <image src="{{item.icon}}"></image>
+      <view>{{item.title}}</view>
+    </view>
+  </view>
+
+</view>

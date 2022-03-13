@@ -1,0 +1,32 @@
+<!--pages/sell/chatPage/chatPage.wxml-->
+<view class="page page2">
+  <view class="chatMes">
+    <image src="{{apiUrl}}/pic/shop/{{temp[0].pic1}}" mode="aspectFill"></image>
+    <view style="margin-left: 3vw">
+      <view class="price">￥{{temp[0].price}}</view>
+      <view class="spOtherMes">
+        <view wx:if="{{temp[0].delivery == false}}">不</view>
+        <view>可刀, </view>
+        <view wx:if="{{temp[0].knife == false}}">不</view>
+        <view>包送</view>
+      </view>
+    </view>
+    <view class="checkTrad" bindtap="checkTrad">
+      确认付款
+    </view>
+  </view>
+  <view class="sendMes {{more?'showMore':''}}">
+    <view class="inputMes">
+      <image src="/icon/chat/voice.png"></image>
+      <input type="text"></input>
+      <image src="/icon/chat/emoji.png"></image>
+      <image src="/icon/chat/more.png" bindtap="showMore"></image>
+    </view>
+    <view class="more">
+      <view class="block" wx:for="{{blockList}}" wx:key="*this">
+        <image src="/icon/chat/{{item.icon}}" bindtap="toOperation" data-method="{{item.operation}}"></image>
+        <view>{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+</view>

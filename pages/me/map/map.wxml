@@ -1,0 +1,7 @@
+<!--pages/me/map/map.wxml-->
+<movable-area class="map-area">
+  <view class="page_title" style="padding-left: 0;">学校地图</view>
+  <movable-view class="map" direction="all" scale scale-value="{{scaleValue}}" scale-max="4" inertia>
+    <image src="/image/map.png"></image>
+  </movable-view>
+</movable-area>

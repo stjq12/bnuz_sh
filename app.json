@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/me/index/index",
+    "pages/me/selling/selling",
+    "pages/me/memberCenter/menberCenter",
+    "pages/officialMall/index/index",
+    "pages/sell/index/index",
+    "pages/sell/tradSuccess/tradSuccess",
+    "pages/sell/chatPage/chatPage",
+    "pages/message/index/index",
+    "pages/me/login/login",
+    "pages/me/map/map",
+    "pages/me/editUserInfo/editUserInfo",
+    "pages/me/binding/binding",
+    "pages/me/buying/buying",
+    "pages/me/saleOut/saleOut",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/sell/spDetail/spDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#f2f2f2",
+    "navigationBarBackgroundColor": "#f2f2f2",
+    "navigationBarTitleText": "BNUZ闲置",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#979795",
+    "selectedColor": "#22544c",
+    "list": [
+      {
+        "pagePath": "pages/sell/index/index",
+        "text": "闲置",
+        "iconPath": "icon/tabbar/sale.png",
+        "selectedIconPath": "icon/tabbar/sale-.png"
+      },
+      {
+        "pagePath": "pages/officialMall/index/index",
+        "text": "官方商城",
+        "iconPath": "icon/tabbar/ask.png",
+        "selectedIconPath": "icon/tabbar/ask-.png"
+      },
+      {
+        "pagePath": "pages/message/index/index",
+        "text": "消息",
+        "iconPath": "icon/tabbar/message.png",
+        "selectedIconPath": "icon/tabbar/message-.png"
+      },
+      {
+        "pagePath": "pages/me/index/index",
+        "text": "我的",
+        "iconPath": "icon/tabbar/me.png",
+        "selectedIconPath": "icon/tabbar/me-.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

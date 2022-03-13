@@ -1,0 +1,29 @@
+<!--pages/me/memberCenter/menberCenter.wxml-->
+<scroll-view style="max-height: 100vh;overflow: hidden">
+<view id="page" class="page">
+  <view class="title">我的会员</view>
+  <view class="user">
+    <view class="row1">
+      <view class="userAvatar"><open-data type="userAvatarUrl"></open-data></view>
+      <view class="mes2">
+        <view class="nickName">stjq12</view>
+        <view>
+          <view>超级会员至：</view><view>2021-01-30</view><view>管理自动续费</view>
+        </view>
+      </view>
+    </view>
+    <view class="row2">
+      <view class="row2Mes1">
+        <image src="/icon/me/flashlight.png"></image><image src="/icon/me/player.png"></image>
+        <view>享31项特权></view>
+      </view>
+      <view class="row2Mes2">立即续费 ></view>
+    </view>
+  </view>
+  <view class="levelMes">
+    <view class="levelMesTitle">专属会员等级</view>
+    <view class="lmRow1">
+      <image mode="widthFix" src="/icon/me/1.jpg"></image>
+    </view>
+  </view>
+</view></scroll-view>

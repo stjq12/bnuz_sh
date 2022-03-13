@@ -1,0 +1,25 @@
+<!--pages/me/login/login.wxml-->
+<view class="page">
+  <view class="page_title">用户登录</view>
+  <!-- 表单 -->
+  <form bindsubmit='formSubmit'>
+    <view class="input_box">
+      <view class="input_title">学号</view>
+      <view class="input_num"><input name="log" bindinput="accountInput" placeholder="请输入学号"
+          placeholder-style="color:#999999;" /></view>
+    </view>
+    <view class="hr"></view>
+    <view class="input_box">
+      <view class="input_title">密码</view>
+      <view class="num"><input name="pwd" bindblur="pwdBlur" placeholder="请输入密码" password
+          placeholder-style="color:#999999;" /></view>
+    </view>
+    <view class="hr"></view>
+    <button class="btn_long" disabled="{{disabled}}" type="{{btnstate}}" form-type='submit'>登录</button>
+  </form>
+  <view class="operate">
+     <view><navigator url="/pages/me/binding/binding">还未绑定？</navigator></view>
+     <view><navigator>解除绑定</navigator></view>
+     <view><navigator>忘记密码</navigator></view>
+  </view>
+</view>

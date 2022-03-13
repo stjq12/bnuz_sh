@@ -1,0 +1,211 @@
+/* pages/ask/index/index.wxss */
+.top{
+  width: 94vw;
+  height: 10vw;
+  padding: 3vw;
+}
+.seach {
+  width: 88%;
+  height: 8vw;
+  background-color: white;
+  border-radius: 30rpx;
+  overflow: hidden;
+  float: left;
+  border: 2rpx solid #22544c;
+}
+
+.seach input {
+  width: 84%;
+  height: 100%;
+  margin-left: 20rpx;
+  float: left;
+}
+
+.seach>view {
+  width: 40rpx;
+  height: 40rpx;
+  padding: 8.2rpx;
+  float: left;
+}
+.seach>view>image {
+  width: 100%;
+  height: 100%;
+}
+.top>image{
+  float: right;
+  height: 8vw;
+  width: 8vw;
+  padding: 1vw;
+}
+
+.slideshow{
+  width: 94vw;
+  height: 36vw;
+  margin: 0 auto;
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+.slideshow image{
+  width: 100%;
+  height: 100%;
+}
+.row2{
+  display: flex;
+  width: 100%;
+  display: flex;
+  margin-top: 2vw;
+}
+
+.row2>view{
+  flex: 1;
+  border-right: 1px solid rgba(100,100,100,0.1);
+  display: flex;
+  justify-content:center;
+}
+.row2 :last-child{
+  border: 0;
+}
+.row2>view>image{
+  width: 3vw;
+  height: 3vw;
+  padding-right: 1vw;
+}
+.row2>view>view{
+  color: #8a8a8a;
+  font-size: xx-small;
+  height: 3vw;
+  line-height: 3vw;
+}
+
+.row3{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95vw;
+  margin: 2.5vw;
+  background-color: white;
+  border-radius: 26rpx;
+  overflow: hidden;
+}
+.row3Box{
+  max-width: 41vw;
+  min-width: 41vw;
+  width: 41vw;
+  padding: 3vw;
+}
+.mes1{
+  display: flex;
+}
+.mes1 :first-child{
+  font-size: large;
+}
+.mes1 :last-child{
+  font-size: x-small;
+  margin-left: 1vw;
+  padding: 0 1vw 0 1vw;
+  line-height: 5vw;
+  height: 5vw;
+  margin-top: 1vw;
+  color: white;
+  border-radius: 3vw;
+}
+.mes2{
+  font-size: small;
+  color: #888;
+}
+.mes3{
+  display: flex;
+  width: 40vw;
+  overflow: hidden;
+}
+.mes3>image{
+  width: 20vw;
+  height: 20vw;
+}
+
+
+.main {
+  width: 94vw;
+  /* min-height: 100px; */
+  margin: 0 auto;
+  background-color: #f2f2f2;
+}
+
+.column {
+  float: left;
+  width: 45.5vw;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.middle {
+  float: left;
+  width: 3vw;
+  height: 100px;
+}
+
+.spBox {
+  background-color: white;
+  width: 45.5vw;
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin-top: 3vw;
+}
+
+.spBox image {
+  width: 45.5vw;
+}
+
+.spBoxMessage {
+  min-height: 10rpx;
+  padding: 15rpx 18rpx 15rpx 18rpx;
+  padding-bottom: 20rpx;
+}
+
+.message1 {
+  font-size: 14px;
+  color: #333;
+  display: -webkit-box;  /*设置为弹性盒子*/
+  -webkit-line-clamp: 3; /*最大行数*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+.message2 {
+  margin-top: 20rpx;
+}
+
+.message2 view {
+  line-height: 30rpx;
+}
+
+.priceIcon {
+  float: left;
+  color: red;
+  font-size: small;
+}
+
+.price {
+  float: left;
+  color: red;
+  font-size: large;
+}
+
+.wants {
+  float: right;
+  color: #888;
+  font-size: small;
+}
+.message3 view {
+  float: left;
+  border-radius: 20rpx;
+  margin-top: 25rpx;
+  /* color: #555; */
+  color: white;
+  font-size: x-small;
+  padding: 1rpx 18rpx 1rpx 18rpx;
+  /* border: 1rpx solid rgba(0,0,0,0.1); */
+}
+

@@ -1,0 +1,113 @@
+/* pages/sell/chatPage/chatPage.wxss */
+.page2{
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.chatMes{
+  position: fixed;
+  top: 0;left: 0;
+  background-color: white;
+  width: 96vw;
+  padding: 2vw;
+  display: flex;
+  flex-direction: row;
+}
+.chatMes>image{
+  width: 12vw;
+  height: 12vw;
+}
+.price{
+  line-height: 6vw;
+  height: 8vw;
+  font-size: large;
+  color: #555;
+}
+.spOtherMes{
+  height: 4vw;
+}
+.spOtherMes>view{
+  line-height: 4vw;
+  height: 4vw;
+  display: inline-block;
+  vertical-align: top;
+  color: #888;
+  font-size: small;
+}
+.checkTrad{
+  height: 8vw;
+  width: 20vw;
+  text-align: center;
+  line-height: 8vw;
+  background-color: #22544c;
+  color: white;
+  font-size: small;
+  margin: 2vw 0 0 38vw;
+}
+.sendMes{
+  position: absolute;
+  bottom: -52vw;left: 0;
+  background-color: rgb(247,247,247);
+  border-top: 1px solid rgba(100,100,100,0.2);
+}
+.inputMes{
+  width: 97vw;
+  padding: 1vw 0 2vw 3vw;
+  display: flex;
+}
+.inputMes>image{
+  width: 8vw;
+  height: 8vw;
+  padding: 2vw 3vw 2vw 0;
+}
+.inputMes>input{
+  height: 8vw;
+  width: 61vw;
+  margin: 2vw 3vw 2vw 0;
+  /* border: 1.2px solid #22544c; */
+  border-radius: 4vw;
+  background-color: white;
+}
+.more{
+  padding: 1vw 0 0 7vw;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2vw;
+}
+.block{
+  width: 16.25vw;
+  margin-right: 7vw;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2vw;
+}
+.block>image{
+  width: 6.25vw;
+  height: 6.25vw;
+  padding: 5vw;
+  /* background-color: rgba(150,150,150,0.1); */
+  background-color: white;
+  border-radius: 20%;
+}
+.block>view{
+  width: 16.25vw;
+  height: 5vw;
+  text-align: center;
+  color: #22544c;
+  font-size: small;
+  margin-top: 1vw;
+}
+
+@keyframes showMore {
+  0% {
+    transform: translate(0,0);
+  }
+  100% {
+    transform: translate(0,-52vw);
+  }
+}
+
+.showMore {
+  animation: showMore 0.5s 1 forwards;
+}

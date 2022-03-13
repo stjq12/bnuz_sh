@@ -1,0 +1,136 @@
+/* pages/me/index/index.wxss */
+/* 第一栏 */
+.page2 {
+  width: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.greenBlock {
+  width: 180vw;
+  position: absolute;
+  margin: 0;
+  left: -40vw;
+  height: 55vw;
+  background-color: #22544c;
+  border-radius: 0 0 50% 50%;
+  z-index: 1;
+}
+
+.userBox {
+  width: 90vw;
+  padding: 5vw;
+  position: relative;
+  z-index: 2;
+}
+
+.userAvatar {
+  float: left;
+  overflow: hidden;
+  width: 139rpx;
+  height: 139rpx;
+  border-radius: 50%;
+  border: 1px solid rgba(200, 200, 200, 0.3);
+}
+
+.userInfoMes {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  vertical-align: top;
+  margin-left: 30rpx;
+}
+
+.userName {
+  height: 80rpx;
+  line-height: 80rpx;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+}
+
+.stuID {
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #f4f4f4;
+}
+
+.editIcon {
+  float: right;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 140rpx;
+}
+
+.editIcon image {
+  width: 100%;
+  height: 100%;
+}
+
+.userRow2 {
+  position: relative;
+  z-index: 2;
+  width: 94vw;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+
+.userRow2>view {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.userRow2 image {
+  margin: 0 auto;
+  width: 8vw;
+  height: 8vw;
+}
+
+.userRow2>view>view {
+  text-align: center;
+  color: #f2f2f2;
+}
+
+.userRow2>view :first-child {
+  font-weight: bolder;
+}
+
+.userRow2>view :last-child {
+  font-size: small;
+}
+
+.userRow3 {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  width: 94vw;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+
+.row3Box {
+  width: 100%;
+  height: 40rpx;
+  padding: 30rpx;
+  border-bottom: 1px solid rgba(150, 150, 150, 0.1);
+}
+
+.row3Box image {
+  float: left;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.row3Box view {
+  float: left;
+  line-height: 40rpx;
+  margin-left: 20rpx;
+  color: #707070;
+}

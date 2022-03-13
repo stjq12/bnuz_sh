@@ -1,0 +1,80 @@
+<!--pages/ask/index/index.wxml-->
+<view class="page">
+  <view class="top">
+    <view class="seach">
+      <input type="text" />
+      <view>
+        <image src="/icon/header/seach.png"></image>
+      </view>
+    </view>
+    <image src="/icon/officialMall/more.png"></image>
+  </view>
+
+  <swiper class="slideshow" indicator-dots circular autoplay interval="3000">
+    <swiper-item wx:for="{{slideShowList}}" wx:key="id">
+      <image mode="aspectFill" src="{{apiUrl}}/pic/officialMall/{{item.pic}}"></image>
+    </swiper-item>
+  </swiper>
+  
+  <view class="row2">
+    <view wx:for="{{row2List}}" wx:key="id">
+      <image src="/icon/officialMall/{{item.pic}}"></image>
+      <view>{{item.name}}</view>
+    </view>
+  </view>
+
+  <view class="row3">
+    <view class="row3Box" wx:for="{{row3List}}" wx:key="id">
+      <view class="mes1">
+        <view>{{item.title1}}</view>
+        <view style="background-color: {{item.color}}">{{item.title2}}</view>
+      </view>
+      <view class="mes2">{{item.mes2}}</view>
+      <view class="mes3">
+        <image src="{{apiUrl}}/pic/officialMall/{{item.pic1}}"></image>
+        <image src="{{apiUrl}}/pic/officialMall/{{item.pic2}}"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="main">
+    <view class="column">
+      <view class="spBox" wx:for="{{spListOdd}}" wx:key="id" data-spid="((item.id))">
+        <image src="{{apiUrl}}/pic/shop/{{item.pic1}}" mode="widthFix"></image>
+        <view class="spBoxMessage">
+          <view class="message1">{{item.title}}</view>
+          <view class="message2">
+            <view class="priceIcon">￥</view>
+            <view class="price">{{item.price}}</view>
+            <view class="clear"></view>
+          </view>
+          <view class="message3">
+            <view wx:if="{{item.delivery == true}}" style="background-color: #2cb2ff; margin-right: 20rpx">年终好货</view>
+            <view wx:if="{{item.knife == true}}" style="background-color: #ff8f2c">自营</view>
+          </view>
+          <view class="clear"></view>
+        </view>
+      </view>
+    </view>
+    <view class="middle"></view>
+    <view class="column">
+      <view class="spBox" wx:for="{{spListEven}}" wx:key="id" bindtap="toSpDetail" data-spid="{{item.id}}">
+        <image src="{{apiUrl}}/pic/shop/{{item.pic1}}" mode="widthFix"></image>
+        <view class="spBoxMessage">
+          <view class="message1">{{item.title}}</view>
+          <view class="message2">
+            <view class="priceIcon">￥</view>
+            <view class="price">{{item.price}}</view>
+            <view class="clear"></view>
+          </view>
+          <view class="message3">
+            <view wx:if="{{item.delivery == true}}" style="background-color: #2cb2ff; margin-right: 20rpx">年终好货</view>
+            <view wx:if="{{item.knife == true}}" style="background-color: #ff8f2c">自营</view>
+          </view>
+          <view class="clear"></view>
+        </view>
+      </view>
+    </view>
+    <view class="clear"></view>
+  </view>
+</view>

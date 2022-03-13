@@ -1,0 +1,19 @@
+<!--pages/me/selling/selling.wxml-->
+<view class="page">
+  <view class="page_title">我发布的</view>
+  <view class="spBox" wx:for="{{spList}}" wx:key="*this">
+    <view class="row1">
+      <image src="{{apiUrl}}/pic/shop/{{item.pic}}" mode="aspectFill"></image>
+      <view class="mes2">
+        <view class="title">{{item.title}}</view>
+        <view class="price">￥{{item.price}}</view>
+        <view class="otherMes">
+          <view>留言{{item.ly}}</view><view>浏览{{item.ll}}</view><view>曝光{{item.bg}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="row2">
+      <view>···</view><view>编辑</view><view>降价</view>
+    </view>
+  </view>
+</view>

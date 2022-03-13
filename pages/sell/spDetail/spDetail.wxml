@@ -1,0 +1,38 @@
+<view class="page" style="background-color: white;">
+  <!-- 顶栏 -->
+  <view class="sellerMes">
+    <image src="{{apiUrl}}/pic/headPhoto/1.JPG"></image>
+    <view>
+      <view>{{temp[0].nickName}}</view>
+      <view>两小时前来过</view>
+    </view>
+  </view>
+
+  <view class="priceMes">
+    <view>￥</view>
+    <view>{{temp[0].price}}</view>
+    <view wx:if="{{temp[0].delivery == true}}" class="otherMes" style="background-color: #FFFFBB;">包送</view>
+    <view wx:if="{{temp[0].knife == true}}" class="otherMes" style="background-color: #FFF0F5">可刀</view>
+  </view>
+
+  <view class="detail">
+    <view>{{temp[0].title}} {{temp[0].detail}}</view>
+  </view>
+
+  <view class="spPic">
+    <image mode="widthFix" src="{{apiUrl}}/pic/shop/{{temp[0].pic1}}"></image>
+    <image wx:if="{{temp[0].pic2 != 'null'}}" mode="widthFix" src="{{apiUrl}}/pic/shop/{{temp[0].pic2}}"></image>
+    <image wx:if="{{temp[0].pic3 != 'null'}}" mode="widthFix" src="{{apiUrl}}/pic/shop/{{temp[0].pic3}}"></image>
+    <image wx:if="{{temp[0].pic4 != 'null'}}" mode="widthFix" src="{{apiUrl}}/pic/shop/{{temp[0].pic4}}"></image>
+  </view>
+
+  <view class="operation">
+    <view class="operateBtn" wx:for="{{operateBtn}}" wx:key="*this">
+      <image src="/icon/public/{{item.src}}"></image>
+      <view>{{item.name}}</view>
+    </view>
+    <view class="wants" bindtap="toChat" data-spid="{{temp[0].id}}">
+      联系卖家
+    </view>
+  </view>
+</view>

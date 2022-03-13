@@ -1,0 +1,11 @@
+<!--pages/sell/tradSuccess/tradSuccess.wxml-->
+<view class="page">
+  <view class="success">
+    <icon class="icon" type="success" size="93"></icon>
+    <view class="icon">交易成功</view>
+  </view>
+  <view class="operation">
+    <view>遇到问题？</view>
+    <view>联系客服</view>
+  </view>
+</view>

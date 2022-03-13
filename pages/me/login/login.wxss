@@ -1,0 +1,11 @@
+/* pages/me/login/login.wxss */
+.operate{
+  display: flex;
+  flex-direction: row;
+}
+.operate view{
+ margin: 0 auto;
+ margin-top:40px;
+ font-size: 14px;
+ color: #333333;
+}
